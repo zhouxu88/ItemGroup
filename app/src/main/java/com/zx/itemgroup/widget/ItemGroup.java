@@ -138,12 +138,6 @@ public class ItemGroup extends FrameLayout implements View.OnClickListener {
         jtRightIv.setVisibility(showJtIcon ? View.VISIBLE : View.GONE);  //设置向右的箭头图标是否可见
     }
 
-    //获取输入的内容
-    public String getText() {
-        return contentEdt.getText().toString().trim();
-    }
-
-
     //Item点击事件监听
     public interface ItemOnClickListener {
         void onClick(View v);
@@ -156,6 +150,16 @@ public class ItemGroup extends FrameLayout implements View.OnClickListener {
      */
     public void setItemOnClickListener(ItemOnClickListener itemOnClickListener) {
         this.itemOnClickListener = itemOnClickListener;
+    }
+
+    //获取输入的内容
+    public String getText() {
+        return contentEdt.getText().toString().trim();
+    }
+
+    //设置输入框的内容
+    public void setText(String text) {
+        contentEdt.setText(text);
     }
 
     @Override
