@@ -43,4 +43,19 @@
         app:isEditable="false"
         app:paddingLeft="15dp"
         app:title="所在城市" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="提交" />
+
+    <!--结果-->
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
 </LinearLayout>

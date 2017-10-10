@@ -140,7 +140,7 @@ public class ItemGroup extends FrameLayout implements View.OnClickListener {
 
     //Item点击事件监听
     public interface ItemOnClickListener {
-        void onClick(View v);
+        void onItemClick(View v);
     }
 
     /**
@@ -161,6 +161,7 @@ public class ItemGroup extends FrameLayout implements View.OnClickListener {
     public void setText(String text) {
         contentEdt.setText(text);
     }
+    
 
     @Override
     public void onClick(View view) {
@@ -168,7 +169,7 @@ public class ItemGroup extends FrameLayout implements View.OnClickListener {
             case R.id.item_group_layout:
                 //点击了Item的布局
                 if (itemOnClickListener != null) {
-                    itemOnClickListener.onClick(view);
+                    itemOnClickListener.onItemClick(this);
                 }
                 break;
             case R.id.clear_iv:
